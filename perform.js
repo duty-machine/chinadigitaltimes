@@ -35,7 +35,9 @@ function generateArticles(items) {
 function generateReadme(items) {
   let listItems = items.map(item => `[${item.title}](articles/${item.id}_${querystring.escape(item.title)}.md)\n`)
   let list = listItems.join("\n")
-  let md = `${list}`
+  let md = `${list}
+
+[查看更多](articles)`
   fs.writeFileSync(`./README.md`, md)
 }
 
