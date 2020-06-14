@@ -15,7 +15,7 @@ function process(item) {
   let match = null
   let id = 0
   if (match = item.guid.match(/\?p=(\d+)/)) {
-    id = 1000000 - (+match[1])
+    id = 0xFFFFF ^ (+match[1])
   }
   return Object.assign(item, {id, categories})
 }
