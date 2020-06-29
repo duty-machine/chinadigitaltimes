@@ -35,7 +35,7 @@ function generateArticles(items) {
 function generateReadme(items) {
   let listItems = items.map(item => `[${item.title}](articles/${item.id}_${querystring.escape(item.title)}.md)\n`)
   let list = listItems.join("\n")
-  let md = `此列表已迁移，请使用[新的地址](https://github.com/duty-machine/news/blob/master/lists/%E4%B8%AD%E5%9B%BD%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.md)
+  let md = `### 此列表已迁移，请使用[新的地址](https://github.com/duty-machine/news/blob/master/lists/%E4%B8%AD%E5%9B%BD%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3.md)
 
 ${list}
 
